@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+<head>
+	<title>Angular JS</title>
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src= "app.js"></script>
+</head>
+<body>
+	<form ng-submit = 'SubmitForm()'>
+		<label for="title">Title:</label><br>
+		<input type="text" id="title" name="title"><br>
+		<label for="body">Body:</label><br>
+		<input type="text" id="body" name="body"><br>
+		<label for="user">User ID:</label><br>
+		<input type="text" id="user" name="user"></input><br>
+
+		<input type = "submit"></input>
+	  </form>
+
+	  <div class='my-4'>
+		<h4 >FETCHED DATA</h4>
+		<ul class='list-group'>
+			<li class='list-group-item my-3' ng-repeat='user in bulkData'>
+				<strong>id: </strong>{{user.id}}
+				<br>
+				<strong>Title: </strong>{{user.title}}
+				<br>
+				<strong>Body: </strong>{{user.body}}
+				<br>
+				<strong>User Id: </strong>{{user.userId}}
+				<br>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
